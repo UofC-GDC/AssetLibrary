@@ -1,5 +1,6 @@
-import { render } from "react-dom";
-import main from "./main";
+import * as React from "react"
+import * as ReactDOM from "react-dom";
+import Main from "./main";
 
 import "./style.scss";
 
@@ -7,6 +8,6 @@ function init() {
 	let root = document.createElement("div");
 	document.body.append(root);
 	root.innerText = "yay";
-	render(main, root);
+	ReactDOM.render(<Main />, root);
 }
 init();
