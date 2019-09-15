@@ -1,6 +1,9 @@
 {
 	"name": "Dial Tone",
-	"author": "GiantBlargg",
+	"created": "2019-09-14T18:00",
+	"authors": [
+		"GiantBlargg"
+	],
 	"description": "The sound a phone makes, this asset is used for testing of the asset repo.",
 	"tags": [
 		"sfx",
