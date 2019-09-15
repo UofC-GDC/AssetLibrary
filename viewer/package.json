@@ -5,10 +5,25 @@
 	"license": "GPL-3.0+",
 	"dependencies": {
 		"@types/node": "^12.7.5",
+		"@types/react": "^16.9.2",
+		"@types/react-dom": "^16.9.0",
+		"css-loader": "^3.2.0",
+		"html-webpack-plugin": "^3.2.0",
+		"mini-css-extract-plugin": "^0.8.0",
+		"node-sass": "^4.12.0",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"sass-loader": "^8.0.0",
+		"ts-loader": "^6.1.0",
 		"ts-node": "^8.3.0",
-		"typescript": "^3.6.3"
+		"typescript": "^3.6.3",
+		"webpack": "^4.40.2",
+		"webpack-cli": "^3.3.8",
+		"webpack-dev-server": "^3.8.0"
 	},
 	"scripts": {
-		"build-index": "node build-index"
+		"build-index": "node build-index",
+		"build-front": "webpack --config web-frontend/webpack.config.js",
+		"serve": "webpack-dev-server --config web-frontend/webpack.config.js"
 	}
 }
