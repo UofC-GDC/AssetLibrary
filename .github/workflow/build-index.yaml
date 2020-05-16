@@ -1,0 +1,22 @@
+name: Build Index
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build-index:
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - run: npm install
+      working-directory: ./viewer
+    - run: npm run-script build-index
+      working-directory: ./viewer
+    - uses: actions/upload-artifact@v2
+      with:
+        name: index
+        path: viewer/public/index.json
