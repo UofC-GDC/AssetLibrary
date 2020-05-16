@@ -12,7 +12,11 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 14
-    - run: yarn && yarn build-index && yarn build-front
+    - run: yarn
+      working-directory: ./viewer
+    - run: yarn build-index
+      working-directory: ./viewer
+    - run: yarn build-front
       working-directory: ./viewer
     - uses: actions/upload-artifact@v2
       with:
