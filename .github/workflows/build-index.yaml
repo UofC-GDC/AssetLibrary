@@ -13,9 +13,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14
-    - run: npm install
+    - run: yarm
       working-directory: ./viewer
-    - run: npm run-script build-index
+    - run: yarn build-index
       working-directory: ./viewer
     - uses: actions/upload-artifact@v2
       with:
