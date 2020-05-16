@@ -1,6 +1,6 @@
 import * as React from "react"
 import InfoSource from "./infoSource"
-import Preview from "./AssetDisplay/preview";
+import AssetDisplay from "./AssetDisplay";
 
 export default class Main extends React.Component<{}, { info: InfoSource, ready: boolean }> {
 	constructor(props: {}) {
@@ -11,7 +11,7 @@ export default class Main extends React.Component<{}, { info: InfoSource, ready:
 	}
 	render() {
 		if (this.state.info.index != undefined)
-			return <>{this.state.info.index.map(asset => <Preview asset={asset} key={asset.path} />)}</>
+			return <>{this.state.info.index.map(asset => <AssetDisplay asset={asset} key={asset.path} />)}</>
 		else
 			return <>Loading...</>
 	}
