@@ -17,7 +17,9 @@ jobs:
       working-directory: ./viewer
     - run: yarn build-index
       working-directory: ./viewer
+    - run: yarn build-front
+      working-directory: ./viewer
     - uses: actions/upload-artifact@v2
       with:
         name: index
-        path: viewer/public/index.json
+        path: viewer/public
