@@ -1,5 +1,5 @@
 import { AssetRecord } from "../infoSource";
-import React = require("react");
+import * as React from "react";
 
 const githubPath = "https://github.com/UofC-GDC/AssetLibrary/tree/master/assets/"
 
